@@ -72,7 +72,11 @@ export function Playground() {
             formatting={formatting}
           />
           <div className="h-[420px]">
-            <CodeEditor value={source} language={monacoLanguage} onChange={setSource} />
+            <CodeEditor
+              value={source}
+              language={monacoLanguage}
+              onChange={setSource}
+            />
           </div>
         </div>
 

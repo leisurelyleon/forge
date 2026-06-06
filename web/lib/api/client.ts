@@ -19,7 +19,9 @@ async function postJson<T>(path: string, body: unknown): Promise<T> {
       signal: controller.signal,
     });
     if (!response.ok) {
-      throw new Error(`Request failed (${response.status} ${response.statusText}).`);
+      throw new Error(
+        `Request failed (${response.status} ${response.statusText}).`,
+      );
     }
     return (await response.json()) as T;
   } catch (error) {
@@ -32,7 +34,10 @@ async function postJson<T>(path: string, body: unknown): Promise<T> {
   }
 }
 
-export function analyzeSource(language: string, source: string): Promise<AnalyzeResponse> {
+export function analyzeSource(
+  language: string,
+  source: string,
+): Promise<AnalyzeResponse> {
   return postJson<AnalyzeResponse>("/analyze", { language, source });
 }
 

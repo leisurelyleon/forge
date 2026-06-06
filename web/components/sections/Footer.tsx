@@ -2,7 +2,10 @@ import { Reveal } from "@/components/motion/Reveal";
 
 const links = [
   { label: "GitHub", href: "https://github.com/leisurelyleon/forge" },
-  { label: "Monaco Editor", href: "https://microsoft.github.io/monaco-editor/" },
+  {
+    label: "Monaco Editor",
+    href: "https://microsoft.github.io/monaco-editor/",
+  },
   { label: "axum", href: "https://github.com/tokio-rs/axum" },
 ];
 
@@ -23,7 +26,15 @@ export function Footer() {
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           {links.map((link) => (
-            <a key={link.label} href={link.href} target="_blank" rel="noreferrer noopener" className="rounded-full border border-foreground/15 px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent/60 hover:text-accent">{link.label}</a>
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="rounded-full border border-foreground/15 px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent/60 hover:text-accent"
+            >
+              {link.label}
+            </a>
           ))}
         </div>
       </Reveal>

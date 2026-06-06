@@ -20,9 +20,9 @@ export function About() {
           </h2>
           <p className="mt-6 text-foreground/70">
             Every keystroke settles for a moment, then the editor sends the
-            buffer to a Rust service. A dependency-free, C-family tokenizer turns
-            it into a token stream, and an analysis pass reports metrics and
-            diagnostics with exact line and column positions.
+            buffer to a Rust service. A dependency-free, C-family tokenizer
+            turns it into a token stream, and an analysis pass reports metrics
+            and diagnostics with exact line and column positions.
           </p>
           <p className="mt-4 text-foreground/70">
             The lexer is pure logic with no I/O, so it is fully testable in
@@ -38,7 +38,9 @@ export function About() {
                 <div className="font-display text-4xl font-bold text-foreground">
                   {stat.value}
                 </div>
-                <div className="mt-1 text-sm text-foreground/60">{stat.label}</div>
+                <div className="mt-1 text-sm text-foreground/60">
+                  {stat.label}
+                </div>
               </div>
             </Reveal>
           ))}

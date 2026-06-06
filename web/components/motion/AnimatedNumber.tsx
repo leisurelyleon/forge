@@ -28,5 +28,9 @@ export function AnimatedNumber({ value, className }: AnimatedNumberProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value, reducedMotion]);
 
-  return <span className={className}>{Math.round(display).toLocaleString("en-US")}</span>;
+  return (
+    <span className={className}>
+      {Math.round(display).toLocaleString("en-US")}
+    </span>
+  );
 }

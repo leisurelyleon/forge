@@ -59,8 +59,21 @@ export function Navbar() {
             onClick={() => setMenuOpen((open) => !open)}
             className="flex h-9 w-9 items-center justify-center rounded-full border border-foreground/15 text-foreground md:hidden"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-              {menuOpen ? <path d="M18 6 6 18M6 6l12 12" /> : <path d="M3 12h18M3 6h18M3 18h18" />}
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              aria-hidden="true"
+            >
+              {menuOpen ? (
+                <path d="M18 6 6 18M6 6l12 12" />
+              ) : (
+                <path d="M3 12h18M3 6h18M3 18h18" />
+              )}
             </svg>
           </button>
         </div>

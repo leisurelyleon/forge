@@ -35,11 +35,16 @@ export function DiagnosticsPanel({ diagnostics }: DiagnosticsPanelProps) {
           key={`${diagnostic.line}-${diagnostic.col}-${index}`}
           className="flex items-start gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.03] px-4 py-3"
         >
-          <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${SEVERITY_DOT[diagnostic.severity]}`} />
+          <span
+            className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${SEVERITY_DOT[diagnostic.severity]}`}
+          />
           <div className="min-w-0">
             <p className="text-sm text-foreground/85">{diagnostic.message}</p>
-            <p className={`mt-0.5 font-mono text-xs ${SEVERITY_COLOR[diagnostic.severity]}`}>
-              {diagnostic.severity} · line {diagnostic.line}, col {diagnostic.col}
+            <p
+              className={`mt-0.5 font-mono text-xs ${SEVERITY_COLOR[diagnostic.severity]}`}
+            >
+              {diagnostic.severity} · line {diagnostic.line}, col{" "}
+              {diagnostic.col}
             </p>
           </div>
         </li>
